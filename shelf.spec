@@ -1,11 +1,11 @@
 #define snapshot 20220107
 
-Name:		bonsai
-Version:	1.0.2
+Name:		shelf
+Version:	2.2.2
 Release:	%{?snapshot:0.%{snapshot}.}1
 Summary:	Git repository manager for Plasma Mobile
 URL:    	https://mauikit.org
-Source0:	https://invent.kde.org/maui/bonsai/-/archive/%{?snapshot:master}%{!?snapshot:v%{version}}/%{name}-%{?snapshot:master}%{!?snapshot:v%{version}}.tar.bz2%{?snapshot:#/%{name}-%{snapshot}.tar.bz2}
+Source0:	https://invent.kde.org/maui/shelf/-/archive/%{?snapshot:master}%{!?snapshot:v%{version}}/%{name}-%{?snapshot:master}%{!?snapshot:v%{version}}.tar.bz2%{?snapshot:#/%{name}-%{snapshot}.tar.bz2}
 License:	GPLv3
 Group:		Development/Tools
 BuildRequires:	cmake
@@ -23,13 +23,13 @@ BuildRequires:	cmake(KF5CoreAddons)
 BuildRequires:	cmake(MauiKit)
 BuildRequires:  cmake(MauiKitFileBrowsing)
 BuildRequires:	gettext
-BuildRequires:	pkgconfig(libgit2)
 BuildRequires:	cmake(Qt5QuickCompiler)
 BuildRequires:	cmake(Qt5Network)
 BuildRequires:	cmake(Qt5QmlModels)
 BuildRequires:	cmake(Qt5Gui)
 BuildRequires:	cmake(Qt5Quick)
 BuildRequires:	cmake(Qt5Widgets)
+BuildRequires:  pkgconfig(poppler-qt5)
 
 %description
 Git repository manager for Plasma Mobile
@@ -43,7 +43,5 @@ Git repository manager for Plasma Mobile
 
 %install
 %ninja_install -C build
-
-%find_lang bonsai
 
 %files
