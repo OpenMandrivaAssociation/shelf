@@ -44,4 +44,10 @@ Git repository manager for Plasma Mobile
 %install
 %ninja_install -C build
 
-%files
+%find_lang shelf
+
+%files -f shelf.lang
+%{_bindir}/shelf
+%{_datadir}/applications/org.kde.shelf.desktop
+%{_datadir}/metainfo/org.kde.shelf.metainfo.xml
+%{_iconsdir}/hicolor/scalable/apps/shelf.svg
