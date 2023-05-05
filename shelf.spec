@@ -3,7 +3,7 @@
 Name:		shelf
 Version:	2.2.2
 Release:	%{?snapshot:0.%{snapshot}.}1
-Summary:	Git repository manager for Plasma Mobile
+Summary:	Document and EBook collection manager
 URL:    	https://mauikit.org
 Source0:	https://invent.kde.org/maui/shelf/-/archive/%{?snapshot:master}%{!?snapshot:v%{version}}/%{name}-%{?snapshot:master}%{!?snapshot:v%{version}}.tar.bz2%{?snapshot:#/%{name}-%{snapshot}.tar.bz2}
 License:	GPLv3
@@ -31,8 +31,11 @@ BuildRequires:	cmake(Qt5Quick)
 BuildRequires:	cmake(Qt5Widgets)
 BuildRequires:  pkgconfig(poppler-qt5)
 
+Requires: mauikit-documents
+Requires: qml(org.mauikit.texteditor)
+
 %description
-Git repository manager for Plasma Mobile
+Document and EBook collection manager
 
 %prep
 %autosetup -p1 -n %{name}-%{?snapshot:master}%{!?snapshot:v%{version}}
