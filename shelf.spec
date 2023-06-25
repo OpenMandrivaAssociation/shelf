@@ -1,7 +1,7 @@
 #define snapshot 20220107
 
 Name:		shelf
-Version:	2.2.2
+Version:	3.0.0
 Release:	%{?snapshot:0.%{snapshot}.}1
 Summary:	Document and EBook collection manager
 URL:    	https://mauikit.org
