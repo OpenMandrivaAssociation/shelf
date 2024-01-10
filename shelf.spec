@@ -21,6 +21,7 @@ BuildRequires:	cmake(Qt5Xml)
 BuildRequires:	cmake(KF5I18n)
 BuildRequires:	cmake(KF5CoreAddons)
 BuildRequires:	cmake(MauiKit3)
+BuildRequires:  cmake(MauiKitDocuments3)
 BuildRequires:  cmake(MauiKitFileBrowsing3)
 BuildRequires:	gettext
 BuildRequires:	cmake(Qt5QuickCompiler)
